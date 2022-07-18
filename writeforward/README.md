@@ -204,9 +204,9 @@ window.addEventListener('load', (event) => {
 document.addEventListener('fullscreenchange', function(e) {
 	
     console.log("fullscreen is: "+document.fullscreen)
-	if document.fullscreen == true {
+	// if document.fullscreen == true {
 		// document.querySelector("#fullscreen")
-	}
+	// }
 	// if ((document.fullScreenElement && document.fullScreenElement !== null) || 
 	// (!document.mozFullScreenElement && !document.webkitFullScreenElement)) {
 	// console.log('fullscreen');
