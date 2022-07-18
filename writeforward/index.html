@@ -1,7 +1,6 @@
 <script src="https://unpkg.com/hyperscript.org@0.9.6"></script>
 <!--
 
-o fullscreen shortcut
 o time counter (active tab, field in focus)
 o avoided distractions counter
 o mobile love
@@ -9,6 +8,7 @@ o scrolling to bottom
 o design the feedback
 
 
+x fullscreen shortcut cmd-enter / ctrl-enter / alt-enter
 x write forward placeholder
 x fullscreen toggle
 x design the buttons
@@ -178,7 +178,7 @@ function catchClick() {
   setCaretToPos(input, 300000, event);
 }
 
-	
+
 const input = document.querySelector('#thecontent');
 input.addEventListener('mousedown', catchClick);
 
@@ -205,6 +205,31 @@ window.addEventListener('load', (event) => {
 	input.focus();
 
 })
+
+document.addEventListener("keydown", function(e) {
+	// console.log(event.altKey + " " + event.keyCode);
+	if ( event.metaKey || event.ctrlKey || event.altKey && event.keyCode == 13 ) {
+		// console.log(event.altKey + " " + event.keyCode);
+		togglefullscreen()
+	}
+
+
+});
+	
+// input.addEventListener("keydown", function(e) {
+// 	console.log(event.altKey event.keyCode);
+// });
+	// console.log(event.altKey event.keyCode);
+	// if ( event.altKey && event.keyCode == 13 ) {
+	// 	console.log(event.altKey event.keyCode);
+	// 	})
+//     if (e.altKey && e.code === "KeyReturn"){
+//         console.log('Alt + C is pressed!');
+		
+//         e.preventDefault();
+  
+	
+
 // document.addEventListener('document.exitFullscreen', (event) => {
 // 	console.log('fullscreen exited')
 // })
