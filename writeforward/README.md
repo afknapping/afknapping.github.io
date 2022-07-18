@@ -27,7 +27,7 @@
 </textarea>
 
 
-<p>
+<p id="buttonbar">
 <button id="clear" _="on click clearcontent() then hide #clear then hide #copy then setFocus()">
 clear
 </button>
@@ -37,7 +37,7 @@ restore
 </button>
 
 <button id="copy" _="on click copycontent() then setFocus()">
-Copy
+copy
 </button>
 
 <button id="fullscreen" _="on click
@@ -194,7 +194,7 @@ function launchFullScreen(element) {
 	
 window.addEventListener('load', (event) => {
     console.log('The page has fully loaded')
-	input.focus();
+	// input.focus();
 
 })
 // document.addEventListener('document.exitFullscreen', (event) => {
@@ -235,23 +235,36 @@ document.addEventListener('fullscreenchange', function(e) {
   outline: none;
 }
 
-
+button {
+	font-size: 12px;
+	background: none;
+    border: none;
+	padding: 0.2em 0.8em 0.2em 0.8em;
+	/* background-color: red; */
+	border-radius: 0.2em;
+	transition: background-color 0.2s;
+	transition: opacity 0.2s;
+	opacity: 0.3;
+	}
+button:hover {
+	cursor: pointer;
+	background-color: #fcfa9f;
+	opacity: 0.9;
+	}
+	
 body {
   padding: 3em;
   background-color: #ddd;
 }
+	
+#buttonbar {
+
+	position: absolute;
+    bottom: 3em;
+    left: 3em;
+    text-align: right;
+    width: 90%;
+    box-sizing: border-box;
+	}
 
 </style>
-
-
-
-
-
-
-<style>
-  
-.markdown-body h1:first-of-type {
-  display: none;
-}
-  
-<style>
