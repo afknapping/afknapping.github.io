@@ -194,7 +194,7 @@ function launchFullScreen(element) {
 	
 window.addEventListener('load', (event) => {
     console.log('The page has fully loaded')
-	// input.focus();
+	input.focus();
 
 })
 // document.addEventListener('document.exitFullscreen', (event) => {
