@@ -202,13 +202,13 @@ input.addEventListener('mousedown', catchClick);
 	
 window.addEventListener('load', (event) => {
     console.log('The page has fully loaded')
-	input.focus();
+    input.focus();
 
 })
 
 document.addEventListener("keydown", function(e) {
 	// console.log(event.altKey + " " + event.keyCode);
-	if ( event.metaKey || event.ctrlKey || event.altKey && event.keyCode == 13 ) {
+	if ( (event.metaKey && event.keyCode == 13) || (event.ctrlKey && event.keyCode == 13) || (event.altKey && event.keyCode == 13) ) {
 		// console.log(event.altKey + " " + event.keyCode);
 		togglefullscreen()
 	}
