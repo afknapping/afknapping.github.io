@@ -1,6 +1,24 @@
 <script src="https://unpkg.com/hyperscript.org@0.9.6"></script>
+<!--
 
-<textarea id="thecontent" _="
+o fullscreen shortcut
+o time counter (active tab, field in focus)
+o avoided distractions counter
+o mobile love
+o scrolling to bottom
+o design the feedback
+
+
+x write forward placeholder
+x fullscreen toggle
+x design the buttons
+x avoid autocomplete on mobile
+x localstorage restore
+x localstorage sync
+x no writing cursor setting, no selecting, no deleting, no cursor keys
+
+-->
+<textarea placeholder="write forward..." id="thecontent" _="
 							 on click log 'clicked'
 							 end
 							 on keydown[8 or 46 or 37 or 38 or 39 or 40]
@@ -40,22 +58,13 @@ restore
 copy
 </button>
 
-<button id="fullscreen" _="on click
-						   document.documentElement.requestFullscreen()
-							   then hide #fullscreen
-							   then show #exitfullscreen
-						   		 then setFocus()
+
+<button id="togglefullscreen" _="on click togglefullscreen() then setFocus()
 						  ">
-		fullscreen
+		toggle fullscreen 
 </button>
-<button id="exitfullscreen" _="on click
-						   document.exitFullscreen()
-							   then show #fullscreen
-							   then hide #exitfullscreen
-							    then setFocus()
-						  ">
-		exit fullscreen
-</button>
+
+
 </p>
 
 <script type="text/hyperscript">
@@ -114,7 +123,6 @@ if localStorage.getItem("content") is empty
 end
 hide #clear
 hide #copy
-hide #exitfullscreen
 -- loadcontent()
 repeat forever
   wait 2s
@@ -176,16 +184,16 @@ input.addEventListener('mousedown', catchClick);
 
 
 
-// Find the right method, call on correct element
-function launchFullScreen(element) {
-  if(element.requestFullScreen) {
-    element.requestFullScreen();
-  } else if(element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if(element.webkitRequestFullScreen) {
-    element.webkitRequestFullScreen();
-  }
-}
+// // Find the right method, call on correct element
+// function launchFullScreen(element) {
+//   if(element.requestFullScreen) {
+//     element.requestFullScreen();
+//   } else if(element.mozRequestFullScreen) {
+//     element.mozRequestFullScreen();
+//   } else if(element.webkitRequestFullScreen) {
+//     element.webkitRequestFullScreen();
+//   }
+// }
 
 // Launch fullscreen for browsers that support it!
 // launchFullScreen(document.documentElement); // the whole page
@@ -194,26 +202,35 @@ function launchFullScreen(element) {
 	
 window.addEventListener('load', (event) => {
     console.log('The page has fully loaded')
-	input.focus();
+	// input.focus();
 
 })
 // document.addEventListener('document.exitFullscreen', (event) => {
 // 	console.log('fullscreen exited')
 // })
 	
-document.addEventListener('fullscreenchange', function(e) {
+// document.addEventListener('fullscreenchange', function(e) {
 	
-    console.log("fullscreen is: "+document.fullscreen)
-	// if document.fullscreen == true {
-		// document.querySelector("#fullscreen")
-	// }
-	// if ((document.fullScreenElement && document.fullScreenElement !== null) || 
-	// (!document.mozFullScreenElement && !document.webkitFullScreenElement)) {
-	// console.log('fullscreen');
-	// } else {
-	// console.log('not fullscreen');
-	// }
-}, false);
+//     console.log("fullscreen is: "+document.fullscreen)
+// 	// if document.fullscreen == true {
+// 		// document.querySelector("#fullscreen")
+// 	// }
+// 	// if ((document.fullScreenElement && document.fullScreenElement !== null) || 
+// 	// (!document.mozFullScreenElement && !document.webkitFullScreenElement)) {
+// 	// console.log('fullscreen');
+// 	// } else {
+// 	// console.log('not fullscreen');
+// 	// }
+// }, false);
+
+function togglefullscreen() {
+	console.log("fullscreen is: "+document.fullscreen)
+	if (!document.fullscreen) {
+		document.documentElement.requestFullscreen()
+	} else {
+		document.exitFullscreen();
+	}
+}
 
 </script>
 
