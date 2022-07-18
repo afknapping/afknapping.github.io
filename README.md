@@ -4,7 +4,7 @@ hello there
 
 tba: [twitter](), [instagram](), [xing](), [urbit]()
 
-- [Write Forward](writeforward)
+- [Write Forward](/writeforward/)
 
 
 <style>
