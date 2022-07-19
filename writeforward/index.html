@@ -4,12 +4,12 @@
 
 o avoided distractions counter
 o time counter (active tab, field in focus)
-o word counter
 o scrolling to bottom
 o design the feedback
 o blur writing on idle
 
 
+x word counter
 x mobile love
 x max width
 x fullscreen shortcut cmd-enter / ctrl-enter / alt-enter
@@ -50,7 +50,10 @@ x no writing cursor setting, no selecting, no deleting, no cursor keys
 
 
 <p id="buttonbar">
-<button id="clear" _="on click clearcontent() then hide #clear then hide #copy then setFocus()">
+
+<span id="wordcount"></span>
+
+<button id="clear" _="on click clearcontent() then hide #clear then hide #copy then put '' into #wordcount then setFocus()">
 clear
 </button>
 
@@ -206,7 +209,7 @@ input.addEventListener('mousedown', catchClick);
 	
 window.addEventListener('load', (event) => {
     console.log('The page has fully loaded')
-    input.focus();
+	input.focus();
 
 })
 
@@ -219,38 +222,7 @@ document.addEventListener("keydown", function(e) {
 
 
 });
-	
-// input.addEventListener("keydown", function(e) {
-// 	console.log(event.altKey event.keyCode);
-// });
-	// console.log(event.altKey event.keyCode);
-	// if ( event.altKey && event.keyCode == 13 ) {
-	// 	console.log(event.altKey event.keyCode);
-	// 	})
-//     if (e.altKey && e.code === "KeyReturn"){
-//         console.log('Alt + C is pressed!');
-		
-//         e.preventDefault();
-  
-	
 
-// document.addEventListener('document.exitFullscreen', (event) => {
-// 	console.log('fullscreen exited')
-// })
-	
-// document.addEventListener('fullscreenchange', function(e) {
-	
-//     console.log("fullscreen is: "+document.fullscreen)
-// 	// if document.fullscreen == true {
-// 		// document.querySelector("#fullscreen")
-// 	// }
-// 	// if ((document.fullScreenElement && document.fullScreenElement !== null) || 
-// 	// (!document.mozFullScreenElement && !document.webkitFullScreenElement)) {
-// 	// console.log('fullscreen');
-// 	// } else {
-// 	// console.log('not fullscreen');
-// 	// }
-// }, false);
 
 function togglefullscreen() {
 	console.log("fullscreen is: "+document.fullscreen)
@@ -260,6 +232,23 @@ function togglefullscreen() {
 		document.exitFullscreen();
 	}
 }
+
+</script>
+
+<script>
+      document
+        .querySelector("#thecontent")
+        .addEventListener("input", function countWord() {
+          let res = [];
+          let str = this.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
+          str.map((s) => {
+            let trimStr = s.trim();
+            if (trimStr.length > 0) {
+              res.push(trimStr);
+            }
+          });
+          document.querySelector("#wordcount").innerText = res.length+" words";
+        });
 
 </script>
 
@@ -305,7 +294,7 @@ body { padding: 0.7em;}
   outline: none;
 }
 
-button {
+button, #wordcount {
 
 	background: none;
     border: none;
