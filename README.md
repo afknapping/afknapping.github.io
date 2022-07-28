@@ -2,10 +2,12 @@ hello there
 
 "under construction"
 
-tba: [twitter](), [instagram](), [xing](), [urbit]()
-
 - [Write Forward](/writeforward/)
+- [The EverHike Kit™](/everhikekit/)
 
+---
+
+tba: [twitter](), [instagram](), [xing](), [urbit]()
 
 <style>
   
