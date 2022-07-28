@@ -1,1 +1,4 @@
 body { background: #ddd }
+.markdown-body h1:first-of-type { display: none; }
+a { text-decoration: underline; }
+.markdown-body { max-width: 42em; }
