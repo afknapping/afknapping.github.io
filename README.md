@@ -9,10 +9,4 @@ hello there
 
 tba: [twitter](), [instagram](), [xing](), [urbit]()
 
-<style>
-  
-.markdown-body h1:first-of-type {
-  display: none;
-}
-  
-<style>
+<style> .markdown-body h1:first-of-type { display: none; } a { text-decoration: underline; } <style>
