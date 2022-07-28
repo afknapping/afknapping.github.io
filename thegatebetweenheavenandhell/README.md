@@ -32,4 +32,4 @@ And follow that white rabbit.
 
 
 
-<style> .markdown-body h1:first-of-type { display: none; } <style>
+<style> .markdown-body h1:first-of-type { display: none; } a { text-decoration: underline; } .markdown-body { max-width: 42em; } <style>
