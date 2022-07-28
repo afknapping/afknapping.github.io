@@ -1,7 +1,4 @@
 \[ [Home](/) \]
-<title>
-The EverHike Kit™
-</title>
 
 # The EverHike Kit™
 
