@@ -68,7 +68,7 @@ copy
 
 <button id="togglefullscreen" _="on click togglefullscreen() then setFocus()
 						  ">
-		toggle fullscreen 
+		toggle fullscreen &nbsp; <span class="key">⌘</span> + <span class="key">↵</span>
 </button>
 
 
@@ -267,28 +267,12 @@ function togglefullscreen() {
 /*   border: none; */
   background-color: #ddd;
   font-family: monospace;
+		font-size: 12px;
+	  
 }
 
 body { padding: 0.7em;}
-#thecontent {
-		font-size: 12px;
-	  height: 30vh;
-	}
-@media (min-width: 600px) { 
-		body {padding: 1.5em;}
-	#thecontent {
-		font-size: 16px;
-	}
-	}
 
-@media (min-width: 800px) { 
-		body {padding: 2em;}
-	#thecontent {
-		font-size: 24px;
-	}
-	}
-
-	
 
 
 #thecontent:focus {
@@ -326,6 +310,40 @@ body {
 	margin-top: 4em;
 	}
 
+@media (min-width: 600px) { 
+		body {padding: 1.5em;}
+	#thecontent {
+		font-size: 16px;
+	}
+	}
+
+@media (min-width: 800px) { 
+		body {padding: 2em;}
+	#thecontent {
+		font-size: 24px;
+	}
+	}
+
+	@media (orientation: portrait) {
+		#thecontent {
+		height: 20vh;	
+		}
+	}
+
+	@media (orientation: landscape) {
+		#thecontent {
+		height: 30vh;	
+		}
+	}
+
+	
+	.key {
+		border: 1px solid black;
+		padding: 0 0.3em 0 0.3em;
+		border-radius: 0.3em;
+		font-size: 80%;
+	}
+	
 </style>
 
 <style>
