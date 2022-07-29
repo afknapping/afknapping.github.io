@@ -68,7 +68,7 @@ copy
 
 <button id="togglefullscreen" _="on click togglefullscreen() then setFocus()
 						  ">
-		toggle fullscreen &nbsp; <span class="key">⌘</span> + <span class="key">↵</span>
+		toggle fullscreen &nbsp; <span class="key">⌘</span> + <span class="key"><span id="return-handle">↵</span></span>
 </button>
 
 
@@ -343,11 +343,10 @@ body {
 		border-radius: 0.3em;
 		font-size: 80%;
 	}
+	#return-handle {
+		position: relative;
+		top: 0.1em;
+	}
 	
 </style>
 
-<style>
-.markdown-body h1:first-of-type {
-  display: none;
-}
-<style>
