@@ -1,3 +1,6 @@
+\[ [Home](/) \]
+<link rel="stylesheet" href="/css.css">
+
 # The gate between heaven and hell
 
 Dear kids.
@@ -29,7 +32,3 @@ Over time, these islands of piece grow larger. They grow together and form land.
 Your self below the layers has a direct connection to source. Intuition is your channel to source. Tune in.
 
 And follow that white rabbit.
-
-
-
-<link rel="stylesheet" href="/css.css">
