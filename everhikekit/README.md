@@ -1,3 +1,9 @@
+---
+title: The EverHike Kit™
+
+---
+
+
 \[ [Home](/) \]
 <link rel="stylesheet" href="/css.css">
 
