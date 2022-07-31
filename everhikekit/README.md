@@ -1,5 +1,5 @@
 ---
-title: The EverHike Kit™
+title: theeverHikekit
 
 ---
 
