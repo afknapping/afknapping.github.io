@@ -23,6 +23,7 @@ When you feel like taking a hike, just change, fill up the water bottles and col
 
 When you go overnight, your pack is *way* heavier. So carrying this stuff around is no big deal. In the long term you want to be able to carry overnight gear and lots of food for many weeks at a time. All training is welcome.
 
+---
 
 \[ [Home](/) \]
 <link rel="stylesheet" href="/css.css">
