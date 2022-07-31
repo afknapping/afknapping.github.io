@@ -1,5 +1,5 @@
-\[ [Home](/) \]
-<link rel="stylesheet" href="/css.css">
+  \[ [Home](/) \]
+  <link rel="stylesheet" href="/css.css">
 
 # The EverHike Kit™
 
