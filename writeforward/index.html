@@ -2,6 +2,11 @@
 <script src="https://unpkg.com/hyperscript.org@0.9.6"></script>
 <!--
 
+o mobile
+  o hide fullscreen
+  o larger buttons
+  o no zooming into input field
+  o screenshots
 
 o avoided distractions counter
 o time counter (active tab, field in focus)
@@ -53,7 +58,7 @@ x no writing cursor setting, no selecting, no deleting, no cursor keys
 
 <span id="wordcount"></span>
 
-<button id="clear" _="on click clearcontent() then hide #clear then hide #copy then put '' into #wordcount then setFocus()">
+<button id="clear" _="on click archive() then clearcontent() then hide #clear then hide #copy then put '' into #wordcount then setFocus()">
 clear
 </button>
 
@@ -138,7 +143,7 @@ repeat forever
 end
 
 if localStorage.getItem("content") is not empty
-  log 'now shoing restore'
+  log 'now showing restore'
   show #restore
 end
 		  
@@ -190,6 +195,26 @@ const input = document.querySelector('#thecontent');
 input.addEventListener('mousedown', catchClick);
 
 
+// on every clear, dump buffer into key Date()
+// localStorage.setItem({ Date(), input)
+
+// list keys
+var keys = Object.keys(localStorage)
+console.log(keys)
+// for key in keys
+
+// https://stackoverflow.com/a/5410827
+for(var i=0, len=localStorage.length; i<len; i++) {
+    var key = localStorage.key(i);
+    var value = localStorage[key];
+    console.log(key + " => " + value);
+}
+
+function archive() {
+	localStorage.setItem( Date(), input.value )
+}
+
+
 
 // // Find the right method, call on correct element
 // function launchFullScreen(element) {
@@ -209,7 +234,7 @@ input.addEventListener('mousedown', catchClick);
 	
 window.addEventListener('load', (event) => {
     console.log('The page has fully loaded')
-	input.focus();
+    input.focus();
 
 })
 
