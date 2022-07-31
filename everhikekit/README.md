@@ -1,9 +1,3 @@
----
-title: theeverhikekit
-
----
-
-
 \[ [Home](/) \]
 <link rel="stylesheet" href="/css.css">
 
