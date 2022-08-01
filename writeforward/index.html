@@ -204,14 +204,20 @@ console.log(keys)
 // for key in keys
 
 // https://stackoverflow.com/a/5410827
-for(var i=0, len=localStorage.length; i<len; i++) {
+for(var i=0, len=localStorage.length; i<len; i++) { 
     var key = localStorage.key(i);
     var value = localStorage[key];
+	if (key == "content" || key == "backup") {
+		console.log("meh")
+		} else {
     console.log(key + " => " + value);
+	}
 }
 
 function archive() {
-	localStorage.setItem( Date(), input.value )
+	var key = localStorage.length + 1
+	console.log(key)
+	localStorage.setItem( key, input.value )
 }
 
 
@@ -234,7 +240,7 @@ function archive() {
 	
 window.addEventListener('load', (event) => {
     console.log('The page has fully loaded')
-    input.focus();
+	input.focus();
 
 })
 
