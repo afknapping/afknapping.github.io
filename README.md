@@ -4,6 +4,7 @@ hello there
 
 - [Write Forward](/writeforward/)
 - [The EverHike Kit™](/everhikekit/)
+- [UX Acceptance Criteria](/ux-acceptance-criteria)
 
 ---
 
