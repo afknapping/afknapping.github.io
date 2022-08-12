@@ -3,6 +3,7 @@ hello there
 "under construction"
 
 - [Write Forward](/writeforward/)
+- [Letzte Party](/letzte-party/)
 - [The EverHike Kit™](/everhikekit/)
 - [UX Acceptance Criteria](/ux-acceptance-criteria)
 
