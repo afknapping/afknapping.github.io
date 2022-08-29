@@ -3,9 +3,13 @@ hello there
 "under construction"
 
 - [Write Forward](/writeforward/)
+- [Try out all the things](/try-out-all-the-things/)
 - [Letzte Party](/letzte-party/)
 - [The EverHike Kit™](/everhikekit/)
+
+<!--
 - [UX Acceptance Criteria](/ux-acceptance-criteria)
+-->
 
 ---
 
