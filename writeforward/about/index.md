@@ -16,7 +16,7 @@ I use write forward every day for work and private writing.
 - Pure Hemingway-mode-only writing app – no deleting or editing possible
 - Fullscreen mode for the classic "distraction-free writing environment"
 - Wordcount
-- Uses localstorage as buffer – nothing gets lost when reloading the page
+- Uses localstorage as buffer – nothing gets lost when reloading the page (use "restore")
 - one-time restoration possibility after clearing the buffer (once you write something, restore is no longer possible)
 - "Copy" copies the whole buffer into the clipboard so you can archive or save it in your favourite note taking app
 
