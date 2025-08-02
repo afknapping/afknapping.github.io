@@ -1,10 +1,13 @@
 hello there
 
-"under construction"
+this page is "under construction"
 
 - [Write Forward](/writeforward/)
+
+<!-- 
 - [Try out all the things](/try-out-all-the-things/)
 - [Letzte Party](/letzte-party/)
+-->
 
 
 <!--
