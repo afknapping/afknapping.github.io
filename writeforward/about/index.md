@@ -3,7 +3,7 @@
 
 **Write forward is a writing app inducing flow and focus.**
 
-It forced you to write in “[Hemingway mode](https://www.google.com/search?q=Hemingway%20mode)” — that is, you can *only* write forward. No editing, no correcting, no inserting.
+It forces you to write in “[Hemingway mode](https://www.google.com/search?q=Hemingway%20mode)” — that is, you can *only* write forward. No editing, no correcting, no inserting.
 
 ## Why?
 
